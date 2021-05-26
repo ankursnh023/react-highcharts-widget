@@ -2,3 +2,9 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+.hc-tooltip {
+  padding: 6px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px blur;
+}
