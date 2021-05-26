@@ -81,6 +81,23 @@ export default function App() {
   return (
     <div className="App">
       <HighchartsReact highcharts={Highcharts} options={options} />
+      <div
+        style={{
+          position: "absolute",
+          top: "34%",
+          right: "45%",
+          height: 155,
+          width: 155,
+          border: "3px solid transparent",
+          borderRadius: "50%",
+          boxShadow: "2px 2px #ccc"
+        }}
+      >
+        <div style={{ marginTop: 62, fontSize: 22, fontWeight: "bold" }}>
+          20K
+          <br /> Issue
+        </div>
+      </div>
     </div>
   );
 }
