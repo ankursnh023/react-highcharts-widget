@@ -1,11 +1,21 @@
 .App {
   font-family: sans-serif;
-  text-align: center;
   position: relative;
+  width: 160px;
+  height: 134px;
+  background: #fcfcfc;
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px 1px #ccc;
 }
 
 .hc-tooltip {
   padding: 6px;
-  border-radius: 2px;
+  border-radius: 4px;
   box-shadow: 2px 2px 2px blur;
+  z-index: 11000 !important;
+}
+
+.hc-title {
+  font-size: 16px !important;
+  font-weight: bolder;
 }

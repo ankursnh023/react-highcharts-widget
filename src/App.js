@@ -7,6 +7,30 @@ variablepie(Highcharts);
 
 export default function App() {
   const options = {
+    chart: {
+      spacing: [2, 0, 0, 0],
+      margin: [14, 0, -6, 0],
+      height: 130,
+      width: 160
+    },
+    title: {
+      useHTML: true,
+      text:
+        '<span class="hc-title">MFA' +
+        '<span style="color: #fa1262">' +
+        " &#129149 " +
+        "" +
+        "2%" +
+        "</span></span>",
+      style: {
+        marginTop: 10
+      }
+    },
+    subtitle: {
+      style: {
+        display: "none"
+      }
+    },
     tooltip: {
       useHTML: true,
       backgroundColor: null,
@@ -20,7 +44,7 @@ export default function App() {
         dataLabels: {
           enabled: false
         },
-        minPointSize: 50,
+        minPointSize: 20,
         innerSize: "50%",
         tooltip: {
           headerFormat: "",
@@ -28,7 +52,7 @@ export default function App() {
             return (
               '<div style="background-color:' +
               this.color +
-              ';color: #fff;" class="hc-tooltip"> ' +
+              ';color: #fff; z-index: 12000" class="hc-tooltip"> ' +
               "<b>" +
               this.y +
               "</b>" +
@@ -41,9 +65,6 @@ export default function App() {
     },
     credits: {
       enabled: false
-    },
-    title: {
-      text: "Authmind"
     },
     series: [
       {
@@ -84,19 +105,23 @@ export default function App() {
       <div
         style={{
           position: "absolute",
-          top: "34%",
-          right: "45%",
-          height: 155,
-          width: 155,
+          top: 47,
+          right: 54,
+          height: 43,
+          width: 43,
           border: "3px solid transparent",
           borderRadius: "50%",
-          boxShadow: "2px 2px #ccc"
+          boxShadow: "1px 2px #ccc",
+          padding: 3,
+          fontSize: 14,
+          fontWeight: "bold",
+          textAlign: "center",
+          zIndex: "-10 !important",
+          cursor: "pointer"
         }}
       >
-        <div style={{ marginTop: 62, fontSize: 22, fontWeight: "bold" }}>
-          20K
-          <br /> Issue
-        </div>
+        <div style={{ paddingTop: 6 }}>20K</div>
+        <div style={{ fontSize: 12 }}>Issue</div>
       </div>
     </div>
   );
