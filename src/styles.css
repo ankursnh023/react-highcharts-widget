@@ -1,8 +1,8 @@
 .App {
   font-family: sans-serif;
   position: relative;
+  text-align: center !important;
   width: 160px;
-  height: 134px;
   background: #fcfcfc;
   border-radius: 8px;
   box-shadow: 1px 1px 3px 1px #ccc;
@@ -18,4 +18,86 @@
 .hc-title {
   font-size: 16px !important;
   font-weight: bolder;
+  text-align: center !important;
+}
+
+.hc-chart {
+  height: 134px !important;
+  width: 160px !important;
+}
+
+.hc-btn {
+  position: absolute;
+  top: 61px;
+  right: 52px;
+  height: 45px;
+  width: 45px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  box-shadow: 1px 2px 20px #ccc;
+  padding: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  z-index: -10px !important;
+  cursor: pointer;
+}
+
+.hc-pT {
+  padding-top: 6px;
+}
+
+.hc-fS {
+  font-size: 12px;
+}
+
+@media (min-width: 2560px) and (max-width: 3840px) {
+  .App {
+    font-family: sans-serif;
+    position: relative;
+    width: 320px;
+    text-align: center !important;
+    background: #fcfcfc;
+    border-radius: 16px;
+    box-shadow: 2px 2px 6px 2px #ccc;
+  }
+
+  .hc-tooltip {
+    font-size: 22px;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 4px blur;
+    z-index: 11000 !important;
+  }
+
+  .hc-title {
+    font-size: 32px !important;
+    font-weight: bolder;
+    text-align: center !important;
+  }
+
+  .hc-btn {
+    position: absolute;
+    top: 108px;
+    right: 96px;
+    height: 110px;
+    width: 110px;
+    border: 6px solid transparent;
+    border-radius: 50%;
+    box-shadow: 2px 4px 40px #ccc;
+    padding: 6px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    z-index: -10px !important;
+    cursor: pointer;
+  }
+
+  .hc-pT {
+    padding-top: 26px;
+  }
+
+  .hc-fS {
+    font-size: 24px;
+  }
 }

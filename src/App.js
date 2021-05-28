@@ -8,12 +8,14 @@ variablepie(Highcharts);
 export default function App() {
   const options = {
     chart: {
-      spacing: [2, 0, 0, 0],
-      margin: [14, 0, -6, 0],
-      height: 130,
-      width: 160
+      height: "100%",
+      marginTop: window.matchMedia("(min-width: 2560px)").matches ? 40 : 20,
+      marginBottom: 0
     },
     title: {
+      style: {
+        textAlign: "center"
+      },
       useHTML: true,
       text:
         '<span class="hc-title">MFA' +
@@ -21,15 +23,7 @@ export default function App() {
         " &#129149 " +
         "" +
         "2%" +
-        "</span></span>",
-      style: {
-        marginTop: 10
-      }
-    },
-    subtitle: {
-      style: {
-        display: "none"
-      }
+        "</span></span>"
     },
     tooltip: {
       useHTML: true,
@@ -39,12 +33,12 @@ export default function App() {
     },
     plotOptions: {
       variablepie: {
-        borderWidth: 5,
+        borderWidth: 2,
         borderColor: "#f5f5f5",
         dataLabels: {
           enabled: false
         },
-        minPointSize: 20,
+        minPointSize: "40%",
         innerSize: "50%",
         tooltip: {
           headerFormat: "",
@@ -69,6 +63,11 @@ export default function App() {
     series: [
       {
         type: "variablepie",
+        states: {
+          hover: {
+            halo: null
+          }
+        },
         data: [
           {
             name: "Low",
@@ -102,26 +101,9 @@ export default function App() {
   return (
     <div className="App">
       <HighchartsReact highcharts={Highcharts} options={options} />
-      <div
-        style={{
-          position: "absolute",
-          top: 47,
-          right: 54,
-          height: 43,
-          width: 43,
-          border: "3px solid transparent",
-          borderRadius: "50%",
-          boxShadow: "1px 2px #ccc",
-          padding: 3,
-          fontSize: 14,
-          fontWeight: "bold",
-          textAlign: "center",
-          zIndex: "-10 !important",
-          cursor: "pointer"
-        }}
-      >
-        <div style={{ paddingTop: 6 }}>20K</div>
-        <div style={{ fontSize: 12 }}>Issue</div>
+      <div className="hc-btn">
+        <div className="hc-pT">20K</div>
+        <div className="hc-fS">Issue</div>
       </div>
     </div>
   );
